@@ -77,7 +77,7 @@
 
     <h3 id="Introduction">Introduction</h3>
     <p class="ex1">
-      <pre>
+      <pre id="Introduction_in_Text">
 Hydrogen fuel cells are one of the new technologies being researched as an alternative to the widely available internal combustion engines in many fields of transportation. This is
 in hopes of finding a greener solution which has a similar range to internal combustion engines which cannot be said about battery vehicles as they known for having ‘range anxiety’. 
       </pre>
@@ -121,6 +121,42 @@ form water vapour.
       <a href="https://www.3m.co.uk/3M/en_GB/hydrogen-technology-uk/applications/fuel-cells/">https://www.3m.co.uk/3M/en_GB/hydrogen-technology-uk/applications/fuel-cells/</a>(Accessed:11/11/2025)
       </pre>
     </p>
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+      <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Placeholder for total word count -->
+    <p id="totalWordCount"></p>
+    <hr>
+    <script>
+      // Function to calculate and display word count for a specified section
+      function displayWordCount(sectionId, outputId) {
+        // Get the text content from the specified section
+        const text = document.getElementById(sectionId).textContent;
+        // Split text into words based on spaces and filter out any empty strings
+        const wordArray = text.trim().split(/\s+/);
+        // Count the words
+        const wordCount = wordArray.length;
+        // Return the word count for summing purposes
+        return wordCount;
+      }
+      // Function to calculate and display total word count from selected sections
+      function displayTotalWordCount() {
+        // Calculate word count for each section and accumulate the total
+        const IntroductionCount = displayWordCount("Introduction_in_Text");
+        const AnalysisCount = displayWordCount("Analysis_and_discussion");
+        // Calculate the sum of all selected sections
+        const totalWordCount = IntroductionCount + AnalysisCount;
+        // Display the total word count
+        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+      }
+      // Run the function for specific sections and display total count when the page loads
+      // window.onload = displayTotalWordCount;
+    </script>
+
+
+
    
         <!-- //////////////////////////////////////////////////////////////////////////////// -->
       <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
@@ -171,45 +207,11 @@ form water vapour.
         // window.onload = getLastUpdatedTime;
     </script>
 
-
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-      <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-      <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Placeholder for total word count -->
-    <p id="totalWordCount"></p>
-    <hr>
-    <script>
-      // Function to calculate and display word count for a specified section
-      function displayWordCount(sectionId, outputId) {
-        // Get the text content from the specified section
-        const text = document.getElementById(sectionId).textContent;
-        // Split text into words based on spaces and filter out any empty strings
-        const wordArray = text.trim().split(/\s+/);
-        // Count the words
-        const wordCount = wordArray.length;
-        // Return the word count for summing purposes
-        return wordCount;
-      }
-      // Function to calculate and display total word count from selected sections
-      function displayTotalWordCount() {
-        // Calculate word count for each section and accumulate the total
-        const IntroductionCount = displayWordCount("Introduction");
-        const AnalysisCount = displayWordCount("Analysis_and_discussion");
-        // Calculate the sum of all selected sections
-        const totalWordCount = IntroductionCount + AnalysisCount;
-        // Display the total word count
-        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-      }
-      // Run the function for specific sections and display total count when the page loads
-      // window.onload = displayTotalWordCount;
-    </script>
    <script>
     window.onload=function(){
      displayTotalWordCount();
      getLastUpdatedTime();
     }
    </script>
-
-  </body>
- 
+</body>
 </html>
