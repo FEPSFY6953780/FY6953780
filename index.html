@@ -168,7 +168,7 @@ form water vapour.
             alert("Last modified time has been successfully verified from GitHub API.");
         }
         // Initial load to display the time on page load
-        window.onload = getLastUpdatedTime;
+        // window.onload = getLastUpdatedTime;
     </script>
 
 
@@ -201,8 +201,14 @@ form water vapour.
         document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
       }
       // Run the function for specific sections and display total count when the page loads
-      window.onload = displayTotalWordCount;
+      // window.onload = displayTotalWordCount;
     </script>
+   <script>
+    window.onload=function(){
+     displayTotalWordCount();
+     getLastUpdatedTime();
+    }
+   </script>
 
   </body>
  
