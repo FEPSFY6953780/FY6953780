@@ -86,7 +86,7 @@ in hopes of finding a greener solution which has a similar range to internal com
     <h3 id="Analysis_and_discussion">Analysis and discussion</h3>
     <h4 id="How_does_a_hydrogen_fuel_cell_work">How does a hydrogen fuel cell work</h4>
     <p class="ex1">   
-      <pre>
+      <pre id="How_does_a_hydrogen_fuel_cell_work_in_text">
 The widely used hydrogen fuel cell for transportation systems is the PEM (Proton Exchange Membrane) fuel cell. A hydrogen fuel cell is like a mix of both internal combustion
 engines and battery powered electric vehicles. 
        
@@ -145,9 +145,9 @@ form water vapour.
       function displayTotalWordCount() {
         // Calculate word count for each section and accumulate the total
         const IntroductionCount = displayWordCount("Introduction_in_Text");
-        const AnalysisCount = displayWordCount("Analysis_and_discussion");
+        const HowDoesAHydrogenFuelCellWork = displayWordCount("How_does_a_hydrogen_fuel_cell_work_in_text");
         // Calculate the sum of all selected sections
-        const totalWordCount = IntroductionCount + AnalysisCount;
+        const totalWordCount = IntroductionCount + HowDoesAHydrogenFuelCellWork;
         // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
       }
