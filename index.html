@@ -152,7 +152,19 @@ harder to electrify. The range of the train is around 300 miles and it can reach
    <h4 id="Petroleum_vs_Hydrogen">Petroleum vs Hydrogen</h4>
    <p>
     <pre id="Petroleum_vs_Hydrogen_in_text">
-     
+Hydrogen fuel cells and petroleum may be fundamentally different but one similarity between the two is that they both take similar time to refuel. One difference is that hydrogen 
+fuel cells emit water vapour which is less harmful compared to the carbon dioxide and other dangerous chemicals into the atmosphere. Another difference is the availability of 
+refuelling services infrastructure for hydrogen as they are very costly to setup compared to petroleum services and the cost of manufacturing the components is also higher for hydrogen 
+fuel cell cars. Hydrogen is more efficient compared to petrol engines at around 30% - 40% efficiency(<a href="#References">15</a>) whereas the petrol engine with an efficiency of around 20%(<a href="References">16</a>). The general 
+cost for a hydrogen car is also far more as the price for the Toyota Mirai which is a modern hydrogen sedan costs about £39,106(<a href="Reference">8</a>) whereas the Toyota Corolla which is a modern petrol sedan costs 
+about £17,151.(<a href="#References">17</a>)
+    </pre>
+   </p>
+   <h3 id="Conclusion">Conclusion</h3>
+   <p>
+    <pre id="Conclusion_in_text">
+In conclusion hydrogen vehicles seem promising, especially for long distance travel for things such as trucks and trains as they have a short refuel time comparable to current petrol 
+and diesel vehicles. However, they still have a long way to go as there is still not a lot of infrastructure and for how costly they are to create and run. 
     </pre>
    </p>
     <h3 id="References">References</h3>
@@ -173,6 +185,9 @@ harder to electrify. The range of the train is around 300 miles and it can reach
 12)<a href="https://www.theengineer.co.uk/content/news/uk-s-first-hydrogen-train-makes-mainline-debut">https://www.theengineer.co.uk/content/news/uk-s-first-hydrogen-train-makes-mainline-debut</a>(Accessed:28/11/2025)
 13)<a href="https://www.londonreconnections.com/2021/hydrail-breezes-in-the-uk/ ">https://www.londonreconnections.com/2021/hydrail-breezes-in-the-uk/ </a>(Accessed:18/11/2025)
 14)<a href="https://www.modernrailways.com/article/new-hydroflex-debuts-cop ">https://www.modernrailways.com/article/new-hydroflex-debuts-cop </a>(Accessed:01/12/2025)
+15)<a href="https://www.fluxpower.com/blog/hydrogen-fuel-cell-efficiency-how-does-it-compare-to-lithium-ion ">https://www.fluxpower.com/blog/hydrogen-fuel-cell-efficiency-how-does-it-compare-to-lithium-ion </a>(Accessed:01/12/2025)
+16)<a href="https://mobility.ch/en/electromobility/use-of-electric-car/efficiency-electric-cars-are-far-more-efficient">https://mobility.ch/en/electromobility/use-of-electric-car/efficiency-electric-cars-are-far-more-efficient</a>(Accessed:01/12/2025)
+17)<a href="https://www.toyota.com/corolla/ ">https://www.toyota.com/corolla/ </a>(Accessed:01/12/2025)
       </pre>
     </p>
 
@@ -199,12 +214,13 @@ harder to electrify. The range of the train is around 300 miles and it can reach
       function displayTotalWordCount() {
         // Calculate word count for each section and accumulate the total
         const IntroductionCount = displayWordCount("Introduction_in_Text");
-        const HowDoesAHydrogenFuelCellWork = displayWordCount("How_does_a_hydrogen_fuel_cell_work_in_text");
-        const WaysToMakeAHydrogenFuelCellMoreEfficient = displayWordCount("Ways_to_make_the_fuel_cell_more_efficient_in_text")
-        const ExamplesOfHydrogenVehicles = displayWordCount("Examples_of_hydrogen_vehicles_in_text")
-        const PetroleumVsHydrogen = displayWordCount("Petroleum_vs_Hydrogen_in_text")
+        const HowDoesAHydrogenFuelCellWorkCount = displayWordCount("How_does_a_hydrogen_fuel_cell_work_in_text");
+        const WaysToMakeAHydrogenFuelCellMoreEfficientCount = displayWordCount("Ways_to_make_the_fuel_cell_more_efficient_in_text")
+        const ExamplesOfHydrogenVehiclesCount = displayWordCount("Examples_of_hydrogen_vehicles_in_text")
+        const PetroleumVsHydrogenCount = displayWordCount("Petroleum_vs_Hydrogen_in_text")
+        const ConclusionCount = displayWordCount("Conclusion_in_text")
         // Calculate the sum of all selected sections
-        const totalWordCount = IntroductionCount + HowDoesAHydrogenFuelCellWork + WaysToMakeAHydrogenFuelCellMoreEfficient + ExamplesOfHydrogenVehicles + PetroleumVsHydrogen;
+        const totalWordCount = IntroductionCount + HowDoesAHydrogenFuelCellWorkCount + WaysToMakeAHydrogenFuelCellMoreEfficientCount + ExamplesOfHydrogenVehiclesCount + PetroleumVsHydrogenCount + ConclusionCount;
         // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
       }
